@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizarra Digital Digital</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.0/fabric.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+   
+</head>
+<body>
+    <div class="toolbar" id="toolbar">
+        <div>
+            <button id="prevPage">⟵ Página anterior</button>
+            <button id="nextPage">Página siguiente ⟶</button>
+            <span id="pageNumber">Página: 1</span>
+            <button id="draw-pencil">Lápiz</button>
+            <select id="figures" title="Insertar Figuras">
+                <option value="draw-rectangle" id="draw-rectangle">Cuadrado</option>
+                <option value="" id="draw-circle">Círculo</option>
+                <option value="" id="draw-arrow">Flecha</option>
+                <option value="" id="draw-triangle">Triángulo</option>
+
+            </select>
+           <select name="addTextImg" id="addTextImg" title="Añadir Texto/Imagen">
+            <option value=add-tex id="add-text">Añadir Texto</option>
+
+            <option value=upload-image id="upload-image">Subir Imagen</option>
+
+           </select>
+        
+            <button id="move">Mover/Modificar</button>
+            <button id="erase">Borrador</button>
+         
+            <input type="color" id="color-picker" value="#000000" tittle=" Color Lápiz">
+            <input type="color" id="border-color-picker" value="#000000" title="Color del borde">
+            <input type="range" id="size-picker" min="1" max="50" value="2" title="Grosor Trazo">
+            <input type="range" id="margin-picker" min="0" max="20" value="0" step="1" title="Margen Figuras">
+
+            <select id="background-picker">
+                <option value="">Sin Fondo</option>
+                <option value="grid">Cuadrícula</option>
+                <option value="lines">Líneas</option>
+                <option value="axes">Ejes de Coordenadas</option>
+            </select>
+            <button id="btnCambiarColor">Cambiar color de fondo</button>
+            <input type="color" id="backgroundColorPicker" value="#ffffff">
+                        <input type="file" id="image-input" style="display: none;">
+            <button id="undo" disabled>Deshacer</button>
+            <button id="redo" disabled>Rehacer</button>
+            <button id="zoom-in">Zoom +</button>
+            <button id="zoom-out">Zoom -</button>
+
+            <select name="guardarBorrarAbrir" id="guardarBorrarAbrir">
+            <option value id="clear-canvas" title="Borrar Página">Borrar</option>
+            <option value id="export" title="Exportar Pizarra">Exportar</option>
+            <option value id="import-project" title="Importar Pizarra">Importar</option>
+            <option value id="save-project" title="Guardar Proyecto en PDF" selected >Guardar en PDF</option>
+            <input type="file" id="load-project" style="display: none;">
+        </select>
+                <!-- Ocultar barra de herramientas -->
+        <button id="toggleToolbar">Esconder</button>
+        </div>
+    </div>
+
+    <button class="toggle-toolbar-button" id="showToolbar">Mostrar Herramientas</button>
+
+    <div id="canvas-container">
+        <canvas id="drawing-canvas"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

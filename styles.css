@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    overflow: hidden;
+}
+
+#toolbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #536782;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    z-index: 10;
+}
+
+#toolbar button, #toolbar input, #toolbar select {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+#toolbar button.active {
+    background-color: #007BFF;
+    color: white;
+}
+
+#toolbar button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+#canvas-container {
+    position: absolute;
+    top: 50px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: auto;
+}
+
+canvas {
+    border: 1px solid #ccc;
+}
+
+.toggle-toolbar-button {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: #2c3e50;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1001;
+    display: none;
+}
+.toggle-toolbar-button.visible {
+    display: block;
+}
+
+#showToolbar {
+display: none;
+position: fixed;
+top: 10px;
+right: 10px;
+z-index: 1001;
+background: #2c3e50;
+color: white;
+padding: 10px;
+border: none;
+cursor: pointer;
+}
+
+#showToolbar.visible {
+display: block;
+}
