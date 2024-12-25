@@ -28,8 +28,8 @@ body {
 }
 
 #toolbar button.active {
-    background-color: #00ff37;
-    color: black;
+    background-color: #ff7b00; /* naranja*/
+    color: white;
 }
 
 #toolbar button:disabled {
