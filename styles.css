@@ -9,7 +9,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #536782;
+    background-color: #224572d7;
     padding: 5px 10px;
     display: flex;
     justify-content: space-between;
@@ -28,8 +28,8 @@ body {
 }
 
 #toolbar button.active {
-    background-color: #007BFF;
-    color: white;
+    background-color: #00ff37;
+    color: black;
 }
 
 #toolbar button:disabled {
@@ -54,7 +54,7 @@ canvas {
     position: fixed;
     top: 10px;
     right: 10px;
-    background: #2c3e50;
+    background: #3875b3;
     color: white;
     border: none;
     padding: 10px;
